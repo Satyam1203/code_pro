@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;   
+}
+header{
+    width:100%;
+    height:80px;
+}
+header h1{
+    width:40%;
+    float:left;
+    padding: 16px;
+    margin: 0px;
+    color:rgb(91, 155, 250);
+}
+header nav{
+    width:60%;
+    padding-top: 20px;
+    float: right;
+}
+header nav ul{
+    float: right;
+    list-style-type: none;
+    /* display: inline; */
+}
+header nav ul li{
+    padding:25px 10px;
+    display: inline;
+}
+li>a:hover{
+    color:rgb(24, 86, 105);
+    background-image: linear-gradient(135deg,rgba(91, 231, 250, 0.5),rgba(241, 203, 203, 0.527));
+}
+.section{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+    background: url("https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg") no-repeat;
+    background-size: cover;
+}
+/* .section img{
+    width:100%;
+    height: 500px;
+    z-index: -1;
+} */
+.block{
+    width:400px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding:50px;
+    margin: 5%;
+    margin-top:150px;
+    float:left;
+    text-align: center;
+    background-image: linear-gradient(to bottom,rgba(162, 235, 253, 0.5 ), rgba(162, 235, 253, 0));
+}
+.block h3{
+    width:100%;
+    margin:auto;
+    margin-bottom: 20px;    
+    background-color: rgba(162,235,253,0.8);
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    background-color: #aaa;
+}
+footer p{
+    margin: 0px;
+}
+.fa-heart{
+    color:red;
+}
+#err{
+    color:tomato;
+    text-align: end;
+}
