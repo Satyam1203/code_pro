@@ -8,7 +8,7 @@ $(document).ready(()=>{
         $.ajax({
             url:'api/programming.php',
             method:'POST',
-            data:{name:name,link:link,issue:issue},
+            data:{name:name,link:link,issue:issue,user:user},
             success:(d)=>{
                 if(d=="200"){
                     $("#res").html("Your problem is recorded.<br>You'll hear from us soon.");
@@ -33,7 +33,7 @@ $(document).ready(()=>{
         $.ajax({
             url:'api/workshop.php',
             method:'POST',
-            data:{ename:ename,topic:topic,req:req},
+            data:{ename:ename,topic:topic,req:req,user:user},
             success:(d)=>{
                 if(d=="200"){
                     $("#res2").html("Your suggestion / response is recorded.<br>You'll hear from us soon.");

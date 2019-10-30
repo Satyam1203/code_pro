@@ -3,6 +3,8 @@
     if(!(isset($_SESSION['user']))){
         echo "<script>window.location='index.html'</script>";
     }
+    $user = $_SESSION['user'];
+    echo "<script>var user = '$user';</script>";
 ?>
 <!DOCTYPE html>
 <html lang="en">

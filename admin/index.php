@@ -49,7 +49,7 @@
     <?php
         if(isset($_REQUEST['add_user'])){
 
-            $email = $_REQUEST['add_user'];
+            $usr = $_REQUEST['add_user'];
             $rand_pwd = rand(100000,999999);
 
             $dsn= "mysql:host=localhost;dbname=code_pro";
@@ -59,10 +59,10 @@
 
             $q = "INSERT into credentials values (?,?)";
             $stmt = $pdo->prepare($q);
-            $stmt->execute([$email,md5($rand_pwd)]);
+            $stmt->execute([$usr,md5($rand_pwd)]);
 
             if($stmt->rowCount()){
-                echo "New user $email added";
+                echo "New user $usr added";
                 require("../sendgrid-php/sendgrid-php.php");
                 // https://github.com/sendgrid/sendgrid-php/releases
                 $email = new \SendGrid\Mail\Mail(); 

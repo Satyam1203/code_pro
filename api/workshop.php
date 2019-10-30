@@ -3,14 +3,15 @@
         $ename = $_REQUEST['ename'];
         $topic = $_REQUEST['topic'];
         $req = $_REQUEST['req'];
+        $user = $_REQUEST['user'];
 
         $dsn = 'mysql:host=localhost;dbname=code_pro';
         $pdo = new PDO($dsn,'root','');
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
-        $query = "INSERT INTO workshop values (?,?,?,?)";
+        $query = "INSERT INTO workshop values (?,?,?,?,?)";
         $stmt = $pdo->prepare($query);
-        $stmt->execute([NULL,$ename,$topic,$req]);
+        $stmt->execute([NULL,$ename,$topic,$req,$user]);
 
         $n=$stmt->rowCount();
         if($n){
